@@ -5,10 +5,15 @@ export default {
 </script>
 
 <template>
-  <h3>Main </h3>
+  <main>
+      <h1>main</h1>
+  </main>
 
 </template>
 
 <style scoped>
+main{
+  height: 300px;
+}
 
 </style>
