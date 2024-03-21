@@ -1,5 +1,15 @@
 <script>
 export default {
+  data(){
+    return{
+      menu:[
+        'Donna','Uomo','Bambini'
+      ],
+      // icone:['fa-regular fa-user','fa-regular fa-heart','fa-solid fa-bag-shopping'
+
+      // ]
+    }
+  }
  
 }
 </script>
@@ -10,9 +20,8 @@ export default {
       <div class="contenitore intestazione">
         <nav>
           <ul>
-            <li><a href="">Donna</a></li>
-            <li><a href="">Uomo</a></li>
-            <li><a href="">Bambini</a></li>
+            <li><a v-for="(item,index ) in menu" href="" :key="index">{{ item }}</a></li>
+          
           </ul>
         </nav>
         <div class="logo"><img src="/public/img/boolean-logo.png" alt=""></div>
