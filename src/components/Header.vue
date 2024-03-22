@@ -5,9 +5,22 @@ export default {
       menu:[
         'Donna','Uomo','Bambini'
       ],
-      // icone:['fa-regular fa-user','fa-regular fa-heart','fa-solid fa-bag-shopping'
+      icone:[
+        {
+         
+          icona:'<i class="fa-regular fa-user"></i>'
 
-      // ]
+        },
+        {
+          icona:'<i class="fa-regular fa-heart"></i>'
+
+        },
+        {
+          icona:'<i class="fa-solid fa-bag-shopping"></i>'
+
+        },
+
+      ]
     }
   }
  
@@ -25,10 +38,11 @@ export default {
           </ul>
         </nav>
         <div class="logo"><img src="/public/img/boolean-logo.png" alt=""></div>
-        <div class="icone">
-          <i class="fa-regular fa-user"></i>
-          <i class="fa-regular fa-heart"></i>
-          <i class="fa-solid fa-bag-shopping"></i>
+        <div  class="icone" :key="index">
+          <ul>
+            <li><a href="" v-html="icon.icona " v-for="(icon,index ) in icone" :key="index"></a></li>
+          </ul>
+        
         </div>
       </div>
     </div>

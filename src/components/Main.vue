@@ -12,6 +12,8 @@ export default {
 </template>
 
 <style scoped>
+
+@use "../assets/scss/partial/variables.scss" as*;
 main{
   height: 300px;
 }
