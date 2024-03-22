@@ -6,7 +6,8 @@ export default {
     productBrand: String,
     productName: String,
     productPrice: Number,
-    productBadges: String,
+    productDiscount: String
+    
   }
 
  
@@ -17,17 +18,17 @@ export default {
 
 <div class="card">
         <div class="levi">
-          <img src="/public/img/1b.webp" alt="">
-          <img  class="seconda-immagine" src="/public/img/1.webp" alt="">
+          <img :src="`/public/img/${productImagef}`" alt="">
+          <img  class="seconda-immagine" :src="`/public/img/${productImageb}`" alt="">
           <div class="cuore nero">&#9829;</div>
-          <div class=" etichetta sale half">-50%</div>
+          <div class=" etichetta sale half" >-50%</div>
           <div class=" etichetta sostenibilità">Sostenibilità</div>
         </div>
-        <div class="marca">Levi's</div>
-        <div class="descrizione">RELAXED FIT TEE UNISEX</div>
+        <div class="marca">{{productBrand}}</div>
+        <div class="descrizione">{{productName}}</div>
         <div>
-          <span class="prezzo scontato">14.99&euro;</span> 
-          <span class="prezzo originale">29,99&euro;</span>
+         
+          <span class="prezzo originale">{{ productPrice }}&euro;</span>
         </div>
       </div>
   
@@ -36,7 +37,7 @@ export default {
 
 <style lang="scss" >
 .card{
-  max-width: 32%;
+  width: 30%;
   height:50%;
   position: relative;
   .levi{
@@ -45,12 +46,12 @@ export default {
       width: 100%;
     }
     .seconda-immagine{
-      display: none;
+      display: block;
       position: absolute;
       top: 0;
-     &:hover{
-      display: block;
-      } 
+    &:hover{
+      display: none;
+    }
     }
     .cuore{
  
@@ -97,7 +98,7 @@ export default {
     font-weight: 600;
   }
   .prezzo.originale{
-    text-decoration: line-through;
+   
 
   }
 

@@ -37,7 +37,7 @@ export default {
           
           </ul>
         </nav>
-        <div class="logo"><img src="/public/img/boolean-logo.png" alt=""></div>
+        <div class="logo"><img src="/img/boolean-logo.png" alt=""></div>
         <div  class="icone" :key="index">
           <ul>
             <li><a href="" v-html="icon.icona " v-for="(icon,index ) in icone" :key="index"></a></li>

@@ -2,18 +2,22 @@
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
 import Footer from './components/Footer.vue';
-import Products from './components/products.json'
+import products from './assets/db.json'
 export default { 
   components:{
       Header,
       Main,
       Footer,
+      
   },
   data(){
     return{
-      Products
+      products
     }
-  },
+  }
+ 
+
+ 
   
  
 }
@@ -29,6 +33,8 @@ export default {
   <Main />
   <Footer />
   </div>
+
+  
 
 </template>
 

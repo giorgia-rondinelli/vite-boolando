@@ -1,10 +1,25 @@
 <script>
 import Card from './partials/Card.vue'
+import {products} from '../assets/db.json'
+
 
 export default {
   components:{
-    Card
+    Card,
+    
+  },
+  data(){
+    return{
+      products
+    }
   }
+  
+
+  
+ 
+  
+
+ 
 
  
 }
@@ -13,7 +28,23 @@ export default {
 <template>
    <main>
     <div class="contenitore principale"> 
-      <Card />
+      <Card 
+      v-for="(product, index) in products"
+      :key="index"
+      :productImagef="`../../public/img/${product.frontImage}`"
+      :productImageb="`../../public/img/${product.backImage}`"
+      :productBrand="product.brand"
+      :productName="product.name"
+      :productPrice="product.price"
+     
+      
+    
+      
+    
+  
+     
+      />
+     
     </div>
   </main>
 
@@ -21,7 +52,7 @@ export default {
 
 <style scoped>
 
-@use "../assets/scss/partial/variables.scss" as*;
+
 
 .principale{
   height: 1300px;
