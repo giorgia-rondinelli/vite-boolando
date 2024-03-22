@@ -1,12 +1,20 @@
 <script>
+import Card from './partials/Card.vue'
+
 export default {
+  components:{
+    Card
+  }
+
  
 }
 </script>
 
 <template>
-  <main>
-      <h1>main</h1>
+   <main>
+    <div class="contenitore principale"> 
+      <Card />
+    </div>
   </main>
 
 </template>
@@ -14,8 +22,14 @@ export default {
 <style scoped>
 
 @use "../assets/scss/partial/variables.scss" as*;
-main{
-  height: 300px;
+
+.principale{
+  height: 1300px;
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+
 }
 
 </style>
